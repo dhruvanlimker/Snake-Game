@@ -1,0 +1,51 @@
+<html>
+<head>
+
+</head>
+<body>
+<canvas id="myCanvas" width="1500" height="700" style="border:3px solid red;">
+
+</canvas>
+<button id="btn" onclick="pos(40,40)">START</button>
+
+<button id="up" onclick="myUp">UP</button>
+<button id="down" onclick="myDown">DOWN</button>
+<button id="left" onclick="myLeft">LEFT</button>
+<button id="right" onclick="myRight">RIGHT</button>
+
+<script>
+function pos(x,y){
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+var x,y;
+var i,f;
+f=0;
+ctx.beginPath();
+ctx.fillStyle = "#00ff00";
+for(i=0;i<4+f;i++){
+ctx.arc(x,y, 15, 0, 2 * Math.PI);
+x=x+20;
+}
+
+ctx.stroke();
+ctx.fill();
+
+
+var score=0;
+var food;
+function myUp(x,y){
+y=y-20;
+x=x-20;
+posi(x,y);
+}
+function myDown(x,y){
+}
+function myLeft(x,y){
+}
+function myRight(x,y){
+
+}
+}
+</script>
+</body>
+</html>
